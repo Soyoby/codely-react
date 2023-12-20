@@ -1,0 +1,52 @@
+.container{
+    width: 100vw;
+    height: 100vh;
+    background-color: #67E6DC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.main{
+    width: 60vw;
+    height: 65vh;
+    background-color: #74B9FF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 20px;
+    box-shadow: 10px 21px 42px 1px rgba(0,0,0,0.75);
+-webkit-box-shadow: 10px 21px 42px 1px rgba(0,0,0,0.75);
+-moz-box-shadow: 10px 21px 42px 1px rgba(0,0,0,0.75);
+}
+.emoji{
+   font-size: 85px;
+   margin: 30px;
+}
+.title{
+    font-size: 45px;
+    margin: 0;
+}
+button{
+    width: 30vw;
+    height: 43px;
+    border-radius: 10px;
+    padding: 10px;
+    cursor: pointer;
+
+}
+button:hover{
+    background-color: #FAD02E;
+}
+.zuv{
+    background-color: #45CE30;
+    color: white;
+}
+.buruu{
+    background-color: #FF362E;
+    color: white;
+}
+
+
+
