@@ -36,9 +36,6 @@ button{
     cursor: pointer;
 
 }
-button:hover{
-    background-color: #FAD02E;
-}
 .zuv{
     background-color: #45CE30;
     color: white;
@@ -47,6 +44,7 @@ button:hover{
     background-color: #FF362E;
     color: white;
 }
+
 
 
 

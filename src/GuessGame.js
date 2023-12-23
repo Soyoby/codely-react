@@ -1,8 +1,16 @@
 import React, { useState } from "react";
 import "./stylee.css";
+import useWindowSize from "react-use/lib/useWindowSize";
+import Confetti from "react-confetti";
+import beep from "../src/game/beep-6-96243.mp3";
 
+import WinnerSound from "../src/game-bonus-144751.mp3";
+
+const audio1 = new Audio(beep);
+const WinerAudio = new Audio(WinnerSound);
 const GuessGame = () => {
   const [hariult, setHariult] = useState("");
+  const { width, height } = useWindowSize()
 
   const asuult1 = {
     name: "One piece",
@@ -132,6 +140,7 @@ const GuessGame = () => {
   const [Onoo, setOnoo] = useState(0);
 
   const handleClick = (hariult) => {
+    audio1.play();
     console.log("hariult", hariult);
     setHariult(hariult);
     if (hariult === asuult.name) {
@@ -142,6 +151,7 @@ const GuessGame = () => {
         const daraagiinDugaar = asuultiindugaar + 1;
         if (daraagiinDugaar >= asuultuud.length) {
           settogloomDuuslaa(true);
+          WinerAudio.play();
           return 0;
         } else return daraagiinDugaar;
       });
@@ -157,6 +167,10 @@ const GuessGame = () => {
     <div className="container">
       {togloomDuuslaa && (
         <div className="main">
+           <Confetti
+      width={width}
+      height={height}
+    />
           <h1>Game over</h1>
           <h1>Avah onoo: {asuultuud.length}</h1>
           <h1>avsan onoo: {Onoo}</h1>
